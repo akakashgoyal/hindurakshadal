@@ -1,0 +1,8 @@
+{
+  "name": "Remix सनातन सेना संगठन | सशक्त सनातनी समाज",
+  "description": "सनातन सेना संगठन - सेवा, सुरक्षा, संरक्षण एवं सनातन समाज सामूहिक शस्त्र पूजन समारोह, फतेहाबाद रोड, आगरा",
+  "requestFramePermissions": [],
+  "majorCapabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
+}
