@@ -69,6 +69,27 @@ export const EventPage: React.FC<EventPageProps> = ({ onOpenRegister, onOpenPass
           </div>
         </div>
 
+        {/* Grand Sabha & Venue Showcase Photo */}
+        <div className="rounded-2xl overflow-hidden border-2 border-amber-400 shadow-xl relative group">
+          <img
+            src="/src/assets/images/event_agra_venue_gathering_1791789430116.jpg"
+            alt="आगरा सामूहिक शस्त्र पूजन सभा"
+            referrerPolicy="no-referrer"
+            className="w-full h-72 sm:h-96 md:h-[450px] object-cover group-hover:scale-101 transition-transform duration-500"
+          />
+          <div className="absolute inset-0 bg-gradient-to-t from-red-950/90 via-black/40 to-transparent flex flex-col justify-end p-6 sm:p-8 text-white">
+            <span className="text-xs sm:text-sm font-bold text-amber-300 font-yatra uppercase tracking-wider">
+              ॥ शस्त्र पूजन महाकुंभ • फतेहाबाद रोड, आगरा ॥
+            </span>
+            <h3 className="text-2xl sm:text-4xl font-extrabold font-yatra text-amber-100 mt-1">
+              2,000+ सनातनी बंधुओं की ऐतिहासिक सहभागिता
+            </h3>
+            <p className="text-xs sm:text-sm text-amber-200/90 font-tiro mt-1 max-w-3xl">
+              वैदिक मंत्रोच्चार, शंखनाद, हवन एवं दिव्य मर्यादा का सामूहिक उत्सव। धर्म रक्षा एवं सामाजिक एकता का प्रत्यक्ष उद्घोष।
+            </p>
+          </div>
+        </div>
+
         {/* 2-Column: Scope & Schedule */}
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
           {/* Pehli Sarvjanik Neev (Slide 7) */}

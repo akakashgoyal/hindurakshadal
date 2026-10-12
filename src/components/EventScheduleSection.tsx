@@ -61,37 +61,59 @@ export const EventScheduleSection: React.FC<EventScheduleSectionProps> = ({ onOp
           </p>
         </div>
 
-        {/* Date & Venue Hero Banner */}
-        <div className="mb-12 bg-gradient-to-r from-red-900 via-stone-900 to-red-950 rounded-xl p-6 sm:p-8 text-white border-2 border-amber-400 shadow-xl">
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 items-center text-center md:text-left">
-            <div className="flex items-center justify-center md:justify-start gap-4">
-              <div className="w-14 h-14 rounded-full bg-amber-500/20 border border-amber-400/50 flex items-center justify-center text-amber-300">
-                <Calendar className="w-7 h-7" />
-              </div>
-              <div>
-                <span className="text-xs uppercase text-amber-300 font-bold tracking-widest block font-yatra">तारीख</span>
-                <span className="text-2xl sm:text-3xl font-extrabold font-mono text-white">20 अक्टूबर 2026</span>
-              </div>
-            </div>
-
-            <div className="flex items-center justify-center md:justify-start gap-4">
-              <div className="w-14 h-14 rounded-full bg-amber-500/20 border border-amber-400/50 flex items-center justify-center text-amber-300">
-                <Clock className="w-7 h-7" />
-              </div>
-              <div>
-                <span className="text-xs uppercase text-amber-300 font-bold tracking-widest block font-yatra">समय</span>
-                <span className="text-2xl sm:text-3xl font-extrabold font-mono text-white">सायं 4:00 बजे से</span>
+        {/* Date & Venue Hero Banner with Venue Gathering Visual */}
+        <div className="mb-12 bg-gradient-to-r from-red-900 via-stone-900 to-red-950 rounded-2xl overflow-hidden border-2 border-amber-400 shadow-xl">
+          <div className="grid grid-cols-1 lg:grid-cols-12 items-center">
+            <div className="lg:col-span-5 h-56 lg:h-full min-h-[220px] relative">
+              <img
+                src="/src/assets/images/event_agra_venue_gathering_1791789430116.jpg"
+                alt="आगरा सामूहिक शस्त्र पूजन स्थल एवं सभा"
+                referrerPolicy="no-referrer"
+                className="w-full h-full object-cover"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t lg:bg-gradient-to-r from-red-950/90 via-black/30 to-transparent flex items-end p-4">
+                <span className="text-xs bg-amber-500 text-stone-950 font-bold font-yatra px-2.5 py-1 rounded shadow-sm">
+                  फतेहाबाद रोड, आगरा
+                </span>
               </div>
             </div>
 
-            <div className="flex items-center justify-center md:justify-start gap-4">
-              <div className="w-14 h-14 rounded-full bg-amber-500/20 border border-amber-400/50 flex items-center justify-center text-amber-300">
-                <MapPin className="w-7 h-7" />
+            <div className="lg:col-span-7 p-6 sm:p-8 text-white space-y-6">
+              <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 text-center sm:text-left">
+                <div className="flex sm:flex-col items-center sm:items-start gap-3 sm:gap-1 bg-white/5 p-3 rounded-lg border border-white/10">
+                  <div className="w-10 h-10 rounded-full bg-amber-500/20 border border-amber-400/50 flex items-center justify-center text-amber-300">
+                    <Calendar className="w-5 h-5" />
+                  </div>
+                  <div>
+                    <span className="text-[11px] uppercase text-amber-300 font-bold tracking-widest block font-yatra">तारीख</span>
+                    <span className="text-lg sm:text-xl font-extrabold font-mono text-white">20 अक्टूबर 2026</span>
+                  </div>
+                </div>
+
+                <div className="flex sm:flex-col items-center sm:items-start gap-3 sm:gap-1 bg-white/5 p-3 rounded-lg border border-white/10">
+                  <div className="w-10 h-10 rounded-full bg-amber-500/20 border border-amber-400/50 flex items-center justify-center text-amber-300">
+                    <Clock className="w-5 h-5" />
+                  </div>
+                  <div>
+                    <span className="text-[11px] uppercase text-amber-300 font-bold tracking-widest block font-yatra">समय</span>
+                    <span className="text-lg sm:text-xl font-extrabold font-mono text-white">सायं 4:00 बजे से</span>
+                  </div>
+                </div>
+
+                <div className="flex sm:flex-col items-center sm:items-start gap-3 sm:gap-1 bg-white/5 p-3 rounded-lg border border-white/10">
+                  <div className="w-10 h-10 rounded-full bg-amber-500/20 border border-amber-400/50 flex items-center justify-center text-amber-300">
+                    <MapPin className="w-5 h-5" />
+                  </div>
+                  <div>
+                    <span className="text-[11px] uppercase text-amber-300 font-bold tracking-widest block font-yatra">स्थान</span>
+                    <span className="text-base sm:text-lg font-bold font-yatra text-white">फतेहाबाद रोड, आगरा</span>
+                  </div>
+                </div>
               </div>
-              <div>
-                <span className="text-xs uppercase text-amber-300 font-bold tracking-widest block font-yatra">स्थान</span>
-                <span className="text-xl sm:text-2xl font-bold font-yatra text-white">फतेहाबाद रोड, आगरा</span>
-              </div>
+
+              <p className="text-xs sm:text-sm text-amber-100/90 font-tiro leading-relaxed">
+                2,000+ सनातनी बंधुओं के साथ सामूहिक वैदिक शस्त्र पूजन, पूज्य संतों के आशीर्वचन, राष्ट्रभक्ति संगीत एवं महाआरती।
+              </p>
             </div>
           </div>
         </div>

@@ -26,8 +26,13 @@ export const LeadershipSection: React.FC = () => {
           <div className="bg-white rounded-lg p-6 sm:p-7 border-2 border-amber-400 shadow-md flex flex-col justify-between text-center relative overflow-hidden group hover:border-red-600 transition-all">
             <div className="absolute top-0 right-0 w-16 h-16 bg-red-100/50 rounded-bl-full pointer-events-none" />
             <div>
-              <div className="w-20 h-20 rounded-full bg-gradient-to-br from-red-100 to-amber-100 border-2 border-red-700 mx-auto flex items-center justify-center text-red-900 text-2xl font-bold shadow-sm mb-4">
-                🚩
+              <div className="w-24 h-24 rounded-full border-3 border-amber-500 mx-auto overflow-hidden shadow-md mb-4 bg-gradient-to-br from-red-100 to-amber-100 p-0.5">
+                <img
+                  src="/src/assets/images/founder_amit_dandotiya_1791789418465.jpg"
+                  alt="अमित दंदोतिया - संस्थापक"
+                  referrerPolicy="no-referrer"
+                  className="w-full h-full object-cover rounded-full group-hover:scale-105 transition-transform duration-300"
+                />
               </div>
               <h3 className="text-2xl font-bold text-red-950 font-yatra">
                 अमित दंदोतिया

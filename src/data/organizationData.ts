@@ -62,6 +62,7 @@ export interface Guest {
   role: string;
   description: string;
   category: 'chief' | 'special' | 'artist' | 'influencer';
+  image?: string;
 }
 
 export interface Pillar {
@@ -86,6 +87,8 @@ export const EVENT_DETAILS = {
   tagline: "धर्मो रक्षति रक्षितः",
   motto: "सेवा • सुरक्षा • संरक्षण",
   management: "Monk Media Marketing",
+  heroImage: "/src/assets/images/hero_shastra_pujan_1791566817854.jpg",
+  venueGatheringImage: "/src/assets/images/event_agra_venue_gathering_1791789430116.jpg",
 };
 
 export const PILLARS: Pillar[] = [
@@ -132,13 +135,15 @@ export const GUESTS: Guest[] = [
     name: "श्री देवेंद्र सिंह तोमर",
     role: "मुख्य अतिथि",
     description: "प्रमुख सामाजिक एवं जनसेवी व्यक्तित्व, सनातन संस्कृति के प्रखर मार्गदर्शक",
-    category: "chief"
+    category: "chief",
+    image: "/src/assets/images/guest_devendra_tomar_1791789338647.jpg"
   },
   {
     name: "श्री गोपेश्वर कृष्ण दास जी",
     role: "विशेष अतिथि",
     description: "पूज्य संत एवं आध्यात्मिक मार्गदर्शक",
-    category: "special"
+    category: "special",
+    image: "/src/assets/images/guest_sant_gopeshwar_1791789350364.jpg"
   },
   {
     name: "श्री मृदुलकांत शास्त्री जी",
@@ -150,7 +155,8 @@ export const GUESTS: Guest[] = [
     name: "डीके ठाकुर एवं विपिन पटाडिया",
     role: "संगीत प्रस्तुति (कलाकार)",
     description: "सुप्रसिद्ध भजन एवं राष्ट्रभक्ति संगीतकार",
-    category: "artist"
+    category: "artist",
+    image: "/src/assets/images/artists_bhajan_performance_1791789406829.jpg"
   },
   {
     name: "मनीष जैन (JJ Communication)",
@@ -177,7 +183,8 @@ export const LEADERSHIP = [
     name: "अमित दंदोतिया",
     role: "संस्थापक",
     organization: "सनातन सेना संगठन",
-    description: "सनातन एकता, सांस्कृतिक पुनर्जागरण और समाज के सशक्तिकरण के लिए समर्पित नेतृत्व।"
+    description: "सनातन एकता, सांस्कृतिक पुनर्जागरण और समाज के सशक्तिकरण के लिए समर्पित नेतृत्व।",
+    image: "/src/assets/images/founder_amit_dandotiya_1791789418465.jpg"
   },
   {
     name: "रॉबिन दंदोतिया",

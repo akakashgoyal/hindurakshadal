@@ -16,27 +16,27 @@ export const InvitationPassModal: React.FC<InvitationPassModalProps> = ({
   if (!isOpen) return null;
 
   return (
-    <div className="fixed inset-0 z-50 overflow-y-auto bg-black/75 backdrop-blur-xs flex items-center justify-center p-4">
-      <div className="relative bg-[#FFFDF9] rounded-xl max-w-lg w-full border-2 border-amber-500 shadow-2xl overflow-hidden my-8">
+    <div className="fixed inset-0 z-50 overflow-y-auto bg-black/75 backdrop-blur-xs flex items-center justify-center p-2.5 sm:p-4">
+      <div className="relative bg-[#FFFDF9] rounded-xl max-w-lg w-full border-2 border-amber-500 shadow-2xl overflow-hidden my-4 sm:my-8 max-h-[92vh] flex flex-col">
         {/* Header */}
-        <div className="bg-gradient-to-r from-red-900 via-stone-900 to-red-900 text-white p-4 border-b border-amber-400 flex items-center justify-between">
-          <div className="flex items-center gap-2">
-            <span className="text-xl text-amber-400">🚩</span>
-            <h3 className="text-base sm:text-lg font-bold font-yatra text-amber-200">
+        <div className="bg-gradient-to-r from-red-900 via-stone-900 to-red-900 text-white p-3.5 sm:p-4 border-b border-amber-400 flex items-center justify-between shrink-0">
+          <div className="flex items-center gap-2 min-w-0">
+            <span className="text-xl text-amber-400 shrink-0">🚩</span>
+            <h3 className="text-base sm:text-lg font-bold font-yatra text-amber-200 truncate">
               आधिकारिक डिजिटल आमंत्रण पत्र
             </h3>
           </div>
           <button
             onClick={onClose}
-            className="text-amber-200 hover:text-white p-1 rounded-md hover:bg-white/10 transition-colors"
+            className="text-amber-200 hover:text-white p-1 rounded-md hover:bg-white/10 transition-colors shrink-0 ml-2"
           >
             <X className="w-5 h-5" />
           </button>
         </div>
 
         {/* Card Content */}
-        <div className="p-6">
-          <div className="border-3 border-amber-500 rounded-xl p-6 bg-gradient-to-b from-amber-50 via-white to-orange-50 shadow-md relative">
+        <div className="p-3.5 sm:p-6 overflow-y-auto">
+          <div className="border-2 sm:border-3 border-amber-500 rounded-xl p-4 sm:p-6 bg-gradient-to-b from-amber-50 via-white to-orange-50 shadow-md relative">
             <div className="text-center pb-3 border-b-2 border-amber-300 mb-4">
               <img
                 src="/src/assets/images/sanatan_emblem_logo_1791566829962.jpg"

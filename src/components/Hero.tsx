@@ -190,13 +190,13 @@ export const Hero: React.FC<HeroProps> = ({ onOpenRegister, onOpenPass }) => {
             </div>
 
             {/* Floating Trust Badge */}
-            <div className="absolute -bottom-4 -left-4 bg-white/95 border border-amber-300 rounded-md p-3 shadow-lg flex items-center gap-3 backdrop-blur-xs">
-              <div className="w-10 h-10 rounded-full bg-red-800 flex items-center justify-center text-amber-300 font-bold">
-                <Users className="w-5 h-5" />
+            <div className="absolute bottom-2 left-2 sm:-bottom-4 sm:-left-4 bg-white/95 border border-amber-300 rounded-md p-2.5 sm:p-3 shadow-lg flex items-center gap-2.5 sm:gap-3 backdrop-blur-xs">
+              <div className="w-8 h-8 sm:w-10 sm:h-10 rounded-full bg-red-800 flex items-center justify-center text-amber-300 font-bold shrink-0">
+                <Users className="w-4 h-4 sm:w-5 sm:h-5" />
               </div>
               <div className="text-left">
-                <div className="text-sm font-bold text-red-950 font-yatra">2,000+ सनातनी</div>
-                <div className="text-xs text-stone-600">अनुमानित जन-सहभागिता</div>
+                <div className="text-xs sm:text-sm font-bold text-red-950 font-yatra">2,000+ सनातनी</div>
+                <div className="text-[10px] sm:text-xs text-stone-600">अनुमानित जन-सहभागिता</div>
               </div>
             </div>
           </div>

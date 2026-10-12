@@ -36,12 +36,23 @@ export const GuestsPage: React.FC = () => {
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
             {/* Chief Guest */}
             {chief && (
-              <div className="bg-white p-6 rounded-xl border-2 border-red-600 shadow-md text-center">
+              <div className="bg-white p-6 rounded-xl border-2 border-red-600 shadow-md text-center group hover:shadow-xl transition-all">
                 <span className="text-xs font-bold text-white bg-red-800 px-3 py-0.5 rounded-full font-yatra">
                   मुख्य अतिथि
                 </span>
-                <div className="w-20 h-20 rounded-full bg-red-100 text-red-800 text-2xl font-bold mx-auto flex items-center justify-center my-3 border border-red-300">
-                  🕉
+                <div className="w-24 h-24 rounded-full border-3 border-amber-500 overflow-hidden mx-auto my-3 shadow-sm bg-gradient-to-br from-red-100 to-amber-100 p-0.5">
+                  {chief.image ? (
+                    <img
+                      src={chief.image}
+                      alt={chief.name}
+                      referrerPolicy="no-referrer"
+                      className="w-full h-full object-cover rounded-full group-hover:scale-105 transition-transform duration-300"
+                    />
+                  ) : (
+                    <div className="w-full h-full flex items-center justify-center text-red-800 text-2xl font-bold">
+                      🕉
+                    </div>
+                  )}
                 </div>
                 <h3 className="text-xl font-bold text-red-950 font-yatra">
                   {chief.name}
@@ -54,12 +65,23 @@ export const GuestsPage: React.FC = () => {
 
             {/* Special Guests */}
             {special.map((g, idx) => (
-              <div key={idx} className="bg-white p-6 rounded-xl border-2 border-amber-400 shadow-md text-center">
+              <div key={idx} className="bg-white p-6 rounded-xl border-2 border-amber-400 shadow-md text-center group hover:shadow-xl transition-all">
                 <span className="text-xs font-bold text-amber-900 bg-amber-100 px-3 py-0.5 rounded-full font-yatra">
                   विशेष अतिथि
                 </span>
-                <div className="w-20 h-20 rounded-full bg-amber-100 text-amber-800 text-2xl font-bold mx-auto flex items-center justify-center my-3 border border-amber-300">
-                  🚩
+                <div className="w-24 h-24 rounded-full border-3 border-amber-400 overflow-hidden mx-auto my-3 shadow-sm bg-gradient-to-br from-amber-100 to-orange-100 p-0.5">
+                  {g.image ? (
+                    <img
+                      src={g.image}
+                      alt={g.name}
+                      referrerPolicy="no-referrer"
+                      className="w-full h-full object-cover rounded-full group-hover:scale-105 transition-transform duration-300"
+                    />
+                  ) : (
+                    <div className="w-full h-full flex items-center justify-center text-amber-800 text-2xl font-bold">
+                      🚩
+                    </div>
+                  )}
                 </div>
                 <h3 className="text-xl font-bold text-red-950 font-yatra">
                   {g.name}
@@ -72,17 +94,34 @@ export const GuestsPage: React.FC = () => {
           </div>
 
           {/* Music Performance Banner */}
-          <div className="mt-6 bg-gradient-to-r from-red-950 via-stone-900 to-red-950 text-white rounded-xl p-5 border border-amber-400 flex flex-col sm:flex-row items-center justify-between gap-4">
-            <div className="flex items-center gap-3">
-              <Music className="w-6 h-6 text-amber-400 shrink-0" />
-              <div>
-                <span className="text-xs text-amber-300 font-yatra block font-bold">संगीत प्रस्तुति</span>
-                <h4 className="text-base sm:text-lg font-bold font-yatra">डीके ठाकुर एवं विपिन पटाडिया</h4>
+          <div className="mt-8 bg-gradient-to-r from-red-950 via-stone-900 to-red-950 text-white rounded-2xl overflow-hidden border-2 border-amber-400 shadow-lg">
+            <div className="grid grid-cols-1 md:grid-cols-12 items-center">
+              <div className="md:col-span-4 h-48 md:h-full min-h-[180px] relative">
+                <img
+                  src="/src/assets/images/artists_bhajan_performance_1791789406829.jpg"
+                  alt="डीके ठाकुर एवं विपिन पटाडिया"
+                  referrerPolicy="no-referrer"
+                  className="w-full h-full object-cover"
+                />
+              </div>
+              <div className="md:col-span-8 p-6 space-y-2">
+                <div className="flex items-center gap-2">
+                  <Music className="w-5 h-5 text-amber-400 shrink-0" />
+                  <span className="text-xs text-amber-300 font-yatra uppercase tracking-wider font-bold">
+                    सांस्कृतिक एवं संगीत प्रस्तुति
+                  </span>
+                </div>
+                <h4 className="text-xl sm:text-2xl font-bold font-yatra">
+                  डीके ठाकुर एवं विपिन पटाडिया
+                </h4>
+                <p className="text-xs sm:text-sm text-amber-100/90 font-tiro">
+                  राष्ट्रभक्ति, शिव तांडव एवं सनातन भजनों की भव्य संगीतमय प्रस्तुति।
+                </p>
+                <div className="text-[11px] text-amber-300/80 font-tiro italic pt-1">
+                  * संगीत प्रस्तुति प्रस्तावित है।
+                </div>
               </div>
             </div>
-            <span className="text-xs text-amber-200/90 font-tiro italic">
-              * संगीत प्रस्तुति प्रस्तावित है।
-            </span>
           </div>
         </div>
 
@@ -96,9 +135,14 @@ export const GuestsPage: React.FC = () => {
           </h2>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-            <div className="bg-white p-6 rounded-xl border border-amber-300 shadow-xs text-center">
-              <div className="w-16 h-16 rounded-full bg-red-100 text-red-900 text-xl font-bold mx-auto flex items-center justify-center mb-3">
-                🚩
+            <div className="bg-white p-6 rounded-xl border border-amber-300 shadow-xs text-center group hover:shadow-md transition-all">
+              <div className="w-20 h-20 rounded-full border-2 border-amber-500 overflow-hidden mx-auto mb-3 shadow-xs bg-red-100 p-0.5">
+                <img
+                  src="/src/assets/images/founder_amit_dandotiya_1791789418465.jpg"
+                  alt="अमित दंदोतिया"
+                  referrerPolicy="no-referrer"
+                  className="w-full h-full object-cover rounded-full group-hover:scale-105 transition-transform duration-300"
+                />
               </div>
               <h3 className="text-xl font-bold text-red-950 font-yatra">अमित दंदोतिया</h3>
               <span className="text-xs font-bold text-red-800 font-yatra block mt-0.5">संस्थापक</span>

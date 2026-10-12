@@ -31,7 +31,7 @@ export default function App() {
   };
 
   return (
-    <div className="min-h-screen flex flex-col bg-[#FFFDF9] text-stone-900 selection:bg-red-700 selection:text-amber-100">
+    <div className="min-h-screen flex flex-col bg-[#FFFDF9] text-stone-900 selection:bg-red-700 selection:text-amber-100 w-full overflow-x-hidden max-w-full">
       {/* Top Header with Multi-page navigation */}
       <Header
         activePage={activePage}
@@ -96,25 +96,28 @@ export default function App() {
       />
 
       {/* Floating Action for Mobile / Quick Shankhnaad & Register */}
-      <div className="fixed bottom-4 right-4 z-40 flex items-center gap-2">
+      <div className="fixed bottom-3 right-3 sm:bottom-4 sm:right-4 z-40 flex items-center gap-1.5 sm:gap-2 max-w-[calc(100vw-24px)]">
         <button
           onClick={handleQuickShankh}
           title="पवित्र शंखनाद करें"
-          className={`px-3.5 py-3 rounded-full shadow-lg border-2 border-amber-300 font-bold text-xs flex items-center gap-1.5 transition-all ${
+          className={`px-2.5 py-2 sm:px-3.5 sm:py-3 rounded-full shadow-lg border-2 border-amber-300 font-bold text-xs flex items-center gap-1 sm:gap-1.5 transition-all shrink-0 ${
             isPlayingShankh
               ? 'bg-amber-400 text-red-950 scale-105 animate-pulse'
               : 'bg-red-900 text-amber-200 hover:bg-red-800'
           }`}
         >
-          <Volume2 className="w-4 h-4" />
-          <span>शंखनाद 🐚</span>
+          <Volume2 className="w-4 h-4 shrink-0" />
+          <span className="hidden xs:inline">शंखनाद</span>
+          <span>🐚</span>
         </button>
 
         <button
           onClick={() => setIsRegisterOpen(true)}
-          className="px-4 py-3 bg-gradient-to-r from-red-800 to-amber-700 hover:from-red-900 hover:to-amber-800 text-white font-bold rounded-full shadow-lg border-2 border-amber-400 text-xs sm:text-sm font-yatra transition-all hover:scale-102"
+          className="px-3 py-2 sm:px-4 sm:py-3 bg-gradient-to-r from-red-800 to-amber-700 hover:from-red-900 hover:to-amber-800 text-white font-bold rounded-full shadow-lg border-2 border-amber-400 text-xs sm:text-sm font-yatra transition-all hover:scale-102 shrink-0 flex items-center gap-1"
         >
-          ई-पास प्राप्त करें 🚩
+          <span>ई-पास</span>
+          <span className="hidden xs:inline">प्राप्त करें</span>
+          <span>🚩</span>
         </button>
       </div>
     </div>

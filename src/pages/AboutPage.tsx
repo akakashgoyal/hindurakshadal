@@ -24,6 +24,27 @@ export const AboutPage: React.FC<AboutPageProps> = ({ onOpenRegister }) => {
           </p>
         </div>
 
+        {/* Hero Visual Card: Seva Samaj & Culture */}
+        <div className="relative rounded-2xl overflow-hidden border-2 border-amber-400 shadow-xl group">
+          <img
+            src="/src/assets/images/seva_samaj_culture_1791566852525.jpg"
+            alt="सनातन संस्कृति एवं गौसेवा"
+            referrerPolicy="no-referrer"
+            className="w-full h-64 sm:h-80 md:h-96 object-cover group-hover:scale-101 transition-transform duration-500"
+          />
+          <div className="absolute inset-0 bg-gradient-to-t from-red-950/90 via-stone-900/40 to-transparent flex flex-col justify-end p-6 sm:p-8 text-white">
+            <span className="text-xs sm:text-sm font-bold text-amber-300 font-yatra">
+              ॥ सेवा परमो धर्मः • धर्मो रक्षति रक्षितः ॥
+            </span>
+            <h2 className="text-2xl sm:text-3xl font-extrabold font-yatra text-white mt-1">
+              सांस्कृतिक पहचान के साथ सामाजिक उत्तरदायित्व
+            </h2>
+            <p className="text-xs sm:text-sm text-amber-100/90 font-tiro mt-1 max-w-2xl">
+              गौसेवा, युवा मार्गदर्शन, नारी सम्मान और असहाय वर्ग के सहयोग में निरंतर सक्रिय रहने का जन-संकल्प।
+            </p>
+          </div>
+        </div>
+
         {/* 1. Ek Saajha Manch (Slide 2) */}
         <div className="bg-gradient-to-br from-amber-50/80 via-white to-orange-50/50 rounded-2xl border-2 border-amber-300 p-6 sm:p-8 shadow-sm">
           <div className="text-center mb-8">

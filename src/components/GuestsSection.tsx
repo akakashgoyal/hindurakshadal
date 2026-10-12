@@ -31,15 +31,26 @@ export const GuestsSection: React.FC = () => {
           {chiefGuests.map((guest, idx) => (
             <div
               key={idx}
-              className="bg-white rounded-lg p-6 sm:p-7 border-2 border-red-600 shadow-lg text-center relative overflow-hidden flex flex-col justify-between"
+              className="bg-white rounded-xl p-6 sm:p-7 border-2 border-red-600 shadow-lg text-center relative overflow-hidden flex flex-col justify-between group hover:shadow-xl transition-all"
             >
               <div className="absolute top-0 right-0 bg-red-800 text-amber-200 text-[11px] font-bold px-3 py-1 rounded-bl-lg font-yatra tracking-wide">
                 मुख्य अतिथि
               </div>
 
               <div>
-                <div className="w-24 h-24 rounded-full bg-gradient-to-br from-red-100 to-amber-100 border-2 border-amber-500 mx-auto flex items-center justify-center text-red-900 text-3xl font-bold shadow-md mb-4">
-                  🕉
+                <div className="w-28 h-28 rounded-full border-3 border-amber-500 mx-auto overflow-hidden shadow-md mb-4 bg-gradient-to-br from-red-100 to-amber-100 p-0.5">
+                  {guest.image ? (
+                    <img
+                      src={guest.image}
+                      alt={guest.name}
+                      referrerPolicy="no-referrer"
+                      className="w-full h-full object-cover rounded-full group-hover:scale-105 transition-transform duration-300"
+                    />
+                  ) : (
+                    <div className="w-full h-full rounded-full flex items-center justify-center text-red-900 text-3xl font-bold">
+                      🕉
+                    </div>
+                  )}
                 </div>
                 <h3 className="text-xl sm:text-2xl font-bold text-red-950 font-yatra">
                   {guest.name}
@@ -62,15 +73,26 @@ export const GuestsSection: React.FC = () => {
           {specialGuests.map((guest, idx) => (
             <div
               key={idx}
-              className="bg-white rounded-lg p-6 sm:p-7 border border-amber-300 shadow-md text-center relative overflow-hidden flex flex-col justify-between"
+              className="bg-white rounded-xl p-6 sm:p-7 border border-amber-300 shadow-md text-center relative overflow-hidden flex flex-col justify-between group hover:shadow-xl transition-all"
             >
               <div className="absolute top-0 right-0 bg-amber-700 text-amber-100 text-[11px] font-bold px-3 py-1 rounded-bl-lg font-yatra tracking-wide">
                 विशेष अतिथि
               </div>
 
               <div>
-                <div className="w-24 h-24 rounded-full bg-gradient-to-br from-amber-100 to-orange-100 border-2 border-amber-400 mx-auto flex items-center justify-center text-amber-900 text-3xl font-bold shadow-md mb-4">
-                  🚩
+                <div className="w-28 h-28 rounded-full border-3 border-amber-400 mx-auto overflow-hidden shadow-md mb-4 bg-gradient-to-br from-amber-100 to-orange-100 p-0.5">
+                  {guest.image ? (
+                    <img
+                      src={guest.image}
+                      alt={guest.name}
+                      referrerPolicy="no-referrer"
+                      className="w-full h-full object-cover rounded-full group-hover:scale-105 transition-transform duration-300"
+                    />
+                  ) : (
+                    <div className="w-full h-full rounded-full flex items-center justify-center text-amber-900 text-3xl font-bold">
+                      🚩
+                    </div>
+                  )}
                 </div>
                 <h3 className="text-xl sm:text-2xl font-bold text-red-950 font-yatra">
                   {guest.name}
@@ -91,27 +113,46 @@ export const GuestsSection: React.FC = () => {
         </div>
 
         {/* Musical Artists & Cultural Performances */}
-        <div className="mb-12 bg-gradient-to-r from-red-950 via-stone-900 to-red-950 text-white rounded-xl p-6 sm:p-8 border border-amber-400/80 shadow-lg">
-          <div className="flex flex-col md:flex-row items-center justify-between gap-6">
-            <div className="flex items-center gap-4 text-left">
-              <div className="w-14 h-14 rounded-full bg-amber-500/20 border border-amber-400 flex items-center justify-center text-amber-300 shrink-0">
-                <Music className="w-7 h-7" />
-              </div>
-              <div>
-                <span className="text-xs uppercase text-amber-300 font-bold tracking-widest font-yatra">
-                  सांस्कृतिक एवं संगीत प्रस्तुति
+        <div className="mb-12 bg-gradient-to-r from-red-950 via-stone-900 to-red-950 text-white rounded-2xl overflow-hidden border-2 border-amber-400/80 shadow-xl">
+          <div className="grid grid-cols-1 lg:grid-cols-12 items-center">
+            <div className="lg:col-span-5 relative h-56 sm:h-64 lg:h-full min-h-[220px]">
+              <img
+                src="/src/assets/images/artists_bhajan_performance_1791789406829.jpg"
+                alt="डीके ठाकुर एवं विपिन पटाडिया भजन संध्या"
+                referrerPolicy="no-referrer"
+                className="w-full h-full object-cover"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t lg:bg-gradient-to-r from-black/80 via-transparent to-transparent flex items-end p-4">
+                <span className="text-xs bg-red-800/90 text-amber-200 font-yatra px-2.5 py-1 rounded border border-amber-400/60">
+                  लाइव भजन एवं राष्ट्रभक्ति संगीत
                 </span>
-                <h3 className="text-xl sm:text-2xl font-bold text-white font-yatra mt-0.5">
-                  डीके ठाकुर एवं विपिन पटाडिया
-                </h3>
-                <p className="text-xs sm:text-sm text-amber-200/90 font-tiro mt-1">
-                  राष्ट्रभक्ति, शिव तांडव एवं सनातन भजनों की भव्य संगीतमय प्रस्तुति।
-                </p>
               </div>
             </div>
 
-            <div className="shrink-0 bg-red-900/60 border border-amber-400/50 px-4 py-2 rounded text-xs text-amber-200 font-yatra">
-              प्रस्तावित विशेष प्रस्तुति 🎵
+            <div className="lg:col-span-7 p-6 sm:p-8 space-y-3">
+              <div className="flex items-center justify-between flex-wrap gap-2">
+                <div className="flex items-center gap-2">
+                  <div className="w-8 h-8 rounded-full bg-amber-500/20 border border-amber-400 flex items-center justify-center text-amber-300 shrink-0">
+                    <Music className="w-4 h-4" />
+                  </div>
+                  <span className="text-xs uppercase text-amber-300 font-bold tracking-widest font-yatra">
+                    सांस्कृतिक एवं संगीत प्रस्तुति
+                  </span>
+                </div>
+                <span className="bg-red-900/80 border border-amber-400/50 px-3 py-1 rounded text-xs text-amber-200 font-yatra">
+                  प्रस्तावित विशेष प्रस्तुति 🎵
+                </span>
+              </div>
+
+              <h3 className="text-2xl sm:text-3xl font-bold text-white font-yatra">
+                डीके ठाकुर एवं विपिन पटाडिया
+              </h3>
+              <p className="text-sm text-amber-100/90 font-tiro leading-relaxed">
+                शिव तांडव, राम स्तुति, हनुमान चालीसा एवं सनातन राष्ट्रभक्ति भजनों की भव्य संगीतमय प्रस्तुति। आगरा के सामूहिक शस्त्र पूजन उत्सव में पावन ऊर्जा का संचार।
+              </p>
+              <div className="pt-2 text-xs text-amber-300 font-tiro italic">
+                * कार्यक्रम में प्रस्तुति प्रस्तावित है।
+              </div>
             </div>
           </div>
         </div>

@@ -57,30 +57,30 @@ export const RegistrationModal: React.FC<RegistrationModalProps> = ({ isOpen, on
   };
 
   return (
-    <div className="fixed inset-0 z-50 overflow-y-auto bg-black/75 backdrop-blur-xs flex items-center justify-center p-4">
-      <div className="relative bg-[#FFFDF9] rounded-xl max-w-xl w-full border-2 border-amber-500 shadow-2xl overflow-hidden my-8">
+    <div className="fixed inset-0 z-50 overflow-y-auto bg-black/75 backdrop-blur-xs flex items-center justify-center p-2.5 sm:p-4">
+      <div className="relative bg-[#FFFDF9] rounded-xl max-w-xl w-full border-2 border-amber-500 shadow-2xl overflow-hidden my-4 sm:my-8 max-h-[92vh] flex flex-col">
         {/* Top Header */}
-        <div className="bg-gradient-to-r from-red-900 via-stone-900 to-red-900 text-white p-5 border-b border-amber-400 flex items-center justify-between">
-          <div className="flex items-center gap-2.5">
-            <span className="text-2xl text-amber-400">🚩</span>
-            <div>
-              <h3 className="text-lg sm:text-xl font-bold font-yatra text-amber-200">
+        <div className="bg-gradient-to-r from-red-900 via-stone-900 to-red-900 text-white p-3.5 sm:p-5 border-b border-amber-400 flex items-center justify-between shrink-0">
+          <div className="flex items-center gap-2 sm:gap-2.5 min-w-0">
+            <span className="text-xl sm:text-2xl text-amber-400 shrink-0">🚩</span>
+            <div className="min-w-0">
+              <h3 className="text-base sm:text-xl font-bold font-yatra text-amber-200 truncate">
                 सहभागिता पंजीकरण • ई-पास
               </h3>
-              <p className="text-xs text-amber-100 font-tiro">
+              <p className="text-[11px] sm:text-xs text-amber-100 font-tiro truncate">
                 सनातन समाज सामूहिक शस्त्र पूजन समारोह, आगरा
               </p>
             </div>
           </div>
           <button
             onClick={onClose}
-            className="text-amber-200 hover:text-white p-1 rounded-md hover:bg-white/10 transition-colors"
+            className="text-amber-200 hover:text-white p-1 rounded-md hover:bg-white/10 transition-colors shrink-0 ml-2"
           >
             <X className="w-5 h-5" />
           </button>
         </div>
 
-        <div className="p-6">
+        <div className="p-4 sm:p-6 overflow-y-auto">
           {!submittedPass ? (
             <form onSubmit={handleSubmit} className="space-y-4">
               <div className="text-xs text-stone-600 font-tiro bg-amber-50 p-3 rounded border border-amber-200">
